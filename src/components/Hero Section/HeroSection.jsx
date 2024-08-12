@@ -1,9 +1,35 @@
 import React, { useState } from "react";
+import * as abcd from "../../Data/Searchlist";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function HeroSection() {
   const [selectedDate, setselectedDate] = useState(null);
+  const [selectbrand, setselectbrand] = useState("All Brands");
+  const [filteredCar, setfilteredCar] = useState([]);
+
+  const carData = {
+    Tata: abcd.TataFindCar,
+    Mahindra: abcd.MahenFindCar,
+    "Maruti Suzuki": abcd.MarutiFindCar,
+    Hyundai: abcd.HyundaiFindCar,
+    Honda: abcd.HondaFindCar,
+    Toyota: abcd.ToyotaFindCar,
+    Ford: abcd.ForFindCar,
+  };
+
+  console.log("Tata Cars Data:", carData.Tata);
+
+  const handleBrandChange = (event) => {
+    const brand = event.target.value;
+    setselectbrand(brand);
+
+    if (brand === "All Brands") {
+      setfilteredCar([]);
+    } else {
+      setfilteredCar(carData[brand]);
+    }
+  };
 
   return (
     <div>
@@ -56,11 +82,12 @@ function HeroSection() {
                     name="cars"
                     id="cars"
                     className="w-56 h-10 px-4  text-sm  max-lg:w-[95%] max-md:w-60"
+                    onChange={handleBrandChange} 
                   >
-                    <option value="ALL BRANDS" disabled selected>
+                    <option value="All Brands" selected>
                       ALL MODELS
                     </option>
-                    <option value="TATA">TATA</option>
+                    <option value="Tata">TATA</option>
                     <option value="Mahindra">Mahindra</option>
                     <option value="Maruti Suzuki">Maruti Suzuki</option>
                     <option value="Hyundai">Hyundai</option>
@@ -82,6 +109,22 @@ function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="filtered-cars mt-8">
+        {filteredCar.length > 0 ? (
+          filteredCar.map((car, index) => (
+            <div key={index} className="car-card">
+              <img src={car.carImage} alt={car.carTitle} />{" "}
+              <h2>{car.carTitle}</h2>
+              <p>{car.pricePerDay}</p>
+              <p>{car.carYear}</p> 
+            </div>
+          ))
+        ) : (
+          <p>No cars available</p>
+        )}{" "}
+        
       </div>
     </div>
   );

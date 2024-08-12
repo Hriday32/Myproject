@@ -19,10 +19,3 @@ const NavLinks = [
   ];
   
   export default NavLinks;
-
-  // const cartypes = [
-  //   {
-    
-  //   }
-  // ]
-  

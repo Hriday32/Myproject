@@ -22,9 +22,9 @@ function Navbar() {
       <div
         className={`nav-container ${
           isFullWidth
-            ? "w-[100%] px-[15%] left-[0] top-1 m-auto bg-gradient-to-b from-[#00000080] to-transparent"
-            : "w-9/12 left-[10%] top-10 px-10"
-        }  fixed max-lg:absolute top-[5%]  z-50 h-20 flex items-center justify-between  max-lg:px-2`}
+            ? "w-[100%] px-[5%] left-[0] top-1 m-auto bg-gradient-to-b from-[#00000080] to-transparent"
+            : "w-9/12 left-[10%] top-5 px-10"
+        }  absolute max-lg:absolute top-[5%]  z-50 h-5 flex items-center justify-between  max-lg:px-2`}
       >
         <div className="left-nav">
           <Link to="/">
@@ -61,8 +61,10 @@ function Navbar() {
           </ul>
 
           <div className="profile flex justify-center items-center gap-2 max-[440px]:hidden">
-            <Link>
-              <i className="ri-user-line bg-white text-black p-3 text-2xl rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out"></i>
+            <Link to="/login">
+              <i className="ri-user-line bg-white text-black p-3 text-2xl rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out">
+                {" "}
+              </i>
             </Link>
             <div className="profile-dets ">
               {/* <p className="text-white font-bold">HI, USER</p> */}

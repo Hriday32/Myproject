@@ -1,4 +1,4 @@
-const TataFindCar = [
+export const TataFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Tata Tigor.jpeg",
         pricePerDay : "Rs 6800 ",
@@ -39,7 +39,7 @@ const TataFindCar = [
         Drive: "4x2",
   },
 ]
-const MahenFindCar = [
+export const MahenFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Tata Tigor.jpeg",
         pricePerDay : "Rs 6800 ",
@@ -80,7 +80,7 @@ const MahenFindCar = [
         Drive: "4x2",
   },
 ]
-const MarutiFindCar = [
+export const MarutiFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Alto 800.webp",
         pricePerDay : "Rs 6800 ",
@@ -147,7 +147,7 @@ const MarutiFindCar = [
         Drive: "4x2",
   },
 ]
-const HyundaiFindCar = [
+export const HyundaiFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Hyundai Aura.webp",
         pricePerDay : "Rs 6800 ",
@@ -214,7 +214,7 @@ const HyundaiFindCar = [
         Drive: "4x2",
   },
 ]
-const HondaFindCar = [
+export const HondaFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Honda City.webp",
         pricePerDay : "Rs 6800 ",
@@ -281,7 +281,7 @@ const HondaFindCar = [
         Drive: "4x2",
   },
 ]
-const ToyotaFindCar = [
+export const ToyotaFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
         pricePerDay : "Rs 6800 ",
@@ -348,7 +348,7 @@ const ToyotaFindCar = [
         Drive: "4x2",
   },
 ]
-const ForFindCar = [
+export const ForFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
         pricePerDay : "Rs 6800 ",
