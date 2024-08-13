@@ -3,8 +3,9 @@ import * as abcd from "../../Data/Searchlist";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function HeroSection() {
-  const [selectedDate, setselectedDate] = useState(null);
+function HeroSection({ isButton }) {
+  const [pickUpDate, setPickUpDate] = useState(null);
+  const [DropUpDate, setDropUpDate] = useState(null);
   const [selectbrand, setselectbrand] = useState("All Brands");
   const [filteredCar, setfilteredCar] = useState([]);
 
@@ -17,18 +18,9 @@ function HeroSection() {
     Toyota: abcd.ToyotaFindCar,
     Ford: abcd.ForFindCar,
   };
-
-  console.log("Tata Cars Data:", carData.Tata);
-
   const handleBrandChange = (event) => {
     const brand = event.target.value;
     setselectbrand(brand);
-
-    if (brand === "All Brands") {
-      setfilteredCar([]);
-    } else {
-      setfilteredCar(carData[brand]);
-    }
   };
 
   return (
@@ -51,8 +43,8 @@ function HeroSection() {
                   <DatePicker
                     className="w-52 h-10 px-4 max-lg:w-[70%] max-md:w-[100%] "
                     placeholderText="Select Date"
-                    selected={selectedDate}
-                    onChange={(date) => setselectedDate(date)}
+                    selected={pickUpDate}
+                    onChange={(date) => setPickUpDate(date)}
                     dateFormat={"dd/MM/yyyy"}
                     minDate={new Date()}
                     popperPlacement="bottom"
@@ -66,8 +58,8 @@ function HeroSection() {
                   <DatePicker
                     className="w-52 h-10 px-4 max-lg:w-[70%] max-md:w-[100%]"
                     placeholderText="Select Date"
-                    selected={selectedDate}
-                    onChange={(date) => setselectedDate(date)}
+                    selected={DropUpDate}
+                    onChange={(date) => setDropUpDate(date)}
                     dateFormat={"dd/MM/yyyy"}
                     minDate={new Date()}
                     popperPlacement="bottom"
@@ -82,7 +74,7 @@ function HeroSection() {
                     name="cars"
                     id="cars"
                     className="w-56 h-10 px-4  text-sm  max-lg:w-[95%] max-md:w-60"
-                    onChange={handleBrandChange} 
+                    onChange={handleBrandChange}
                   >
                     <option value="All Brands" selected>
                       ALL MODELS
@@ -103,6 +95,13 @@ function HeroSection() {
               <button
                 className="text-white px-8 py-3 mb-7 bg-[#DC2D13] text-sm relative font-bold hover:bg-[#FFA500] transition-all duration-150 ease-in-out max-lg:px-6 "
                 type="button"
+                onClick={() => {
+                  if (selectbrand === "All Brands") {
+                    setfilteredCar([]);
+                  } else {
+                    setfilteredCar(carData[selectbrand]);
+                  }
+                }}
               >
                 FIND IT NOW
               </button>
@@ -111,20 +110,33 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="filtered-cars mt-8">
-        {filteredCar.length > 0 ? (
-          filteredCar.map((car, index) => (
-            <div key={index} className="car-card">
-              <img src={car.carImage} alt={car.carTitle} />{" "}
-              <h2>{car.carTitle}</h2>
-              <p>{car.pricePerDay}</p>
-              <p>{car.carYear}</p> 
-            </div>
-          ))
-        ) : (
-          <p>No cars available</p>
-        )}{" "}
-        
+      <div>
+        <div className="grid grid-cols-3 gap-4 mb-10">
+          {filteredCar.length > 0 ? (
+            filteredCar.map((car, index) => (
+              <div
+                key={index}
+                className="col-span-1 gap-4"
+              >
+                <p></p>
+                <img
+                  className=""
+                  src={car.carImage}
+                  alt={car.carTitle}
+                />{" "}
+                <h2>{car.carTitle}</h2>
+                <p className="]">
+                  {car.pricePerDay}
+                </p>
+                <p className="">
+                  {car.carYear}
+                </p>
+              </div>
+            ))
+          ) : (
+            <p>No cars available</p>
+          )}{" "}
+        </div>
       </div>
     </div>
   );
