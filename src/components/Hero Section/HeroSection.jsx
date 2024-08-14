@@ -3,7 +3,7 @@ import * as abcd from "../../Data/Searchlist";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function HeroSection({ isButton }) {
+function HeroSection() {
   const [pickUpDate, setPickUpDate] = useState(null);
   const [DropUpDate, setDropUpDate] = useState(null);
   const [selectbrand, setselectbrand] = useState("All Brands");
@@ -25,14 +25,14 @@ function HeroSection({ isButton }) {
 
   return (
     <div>
-      <div className="hero-container w-full h-[100vh] -z-50  top-0 ">
-        <div className="hero-bg w-full h-screen bg-hero-pattern bg-no-repeat bg-center bg-cover">
-          <div className="hero-content bg-[#000000a2] w-full h-screen flex flex-col justify-center items-center">
+      <div className="hero-container w-full h-auto -z-50  top-0 ">
+        <div className="hero-bg w-full md:h-[100vh] bg-hero-pattern bg-no-repeat bg-center bg-cover ">
+          <div className="hero-content bg-[#000000a2] w-full h-full flex flex-col justify-center items-center">
             <div className="hero-heading flex flex-col justify-center items-center">
-              <h1 className="text-6xl text-white font-bold tracking-wide max-md:text-4xl max-[448px]:text-2xl">
+              <h1 className="text-6xl text-white font-bold tracking-wide">
                 Best Car Rental Prices
               </h1>
-              <p className="text-xl text-white mt-2 font-semibold max-md:text-sm max-[448px]:w-[80%] max-[448px]:text-center">
+              <p className="text-xl text-white mt-2 font-semibold ">
                 Practical & Convenient Auto Hire, As Low As Rs:3500 / day
               </p>
             </div>
@@ -111,30 +111,24 @@ function HeroSection({ isButton }) {
       </div>
 
       <div>
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-12 gap-4 mb-10 mt-6 px-4 shadow-black">
           {filteredCar.length > 0 ? (
             filteredCar.map((car, index) => (
               <div
                 key={index}
-                className="col-span-1 gap-4"
+                className="col-span-12 md:col-span-6 lg:col-span-4 border-slate-700 border-solid "
               >
-                <p></p>
                 <img
-                  className=""
+                  className="w-full h-[200px] justify-self-center "
                   src={car.carImage}
-                  alt={car.carTitle}
                 />{" "}
-                <h2>{car.carTitle}</h2>
-                <p className="]">
-                  {car.pricePerDay}
-                </p>
-                <p className="">
-                  {car.carYear}
-                </p>
+                <h2 className="text-center dotted font-bold">{car.carTitle}</h2>
+                <p className="text-center">{car.pricePerDay}</p>
+                <p className="text-center">{car.carYear}</p>
               </div>
             ))
           ) : (
-            <p>No cars available</p>
+            <p></p>
           )}{" "}
         </div>
       </div>

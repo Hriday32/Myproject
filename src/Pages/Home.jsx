@@ -10,7 +10,7 @@ import Reviews from "../components/Reviews/Reviews";
 
 function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="w-full h-auto overflow-hidden">
       <HeroSection />
       <FacilitiesSection />
       <BestRentalService />

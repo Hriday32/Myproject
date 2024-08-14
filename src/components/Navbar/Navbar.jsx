@@ -19,21 +19,15 @@ function Navbar() {
 
   return (
     <>
-      <div
-        className={`nav-container ${
-          isFullWidth
-            ? "w-[100%] px-[5%] left-[0] top-1 m-auto bg-gradient-to-b from-[#00000080] to-transparent"
-            : "w-9/12 left-[10%] top-5 px-10"
-        }  absolute max-lg:absolute top-[5%]  z-50 h-5 flex items-center justify-between  max-lg:px-2`}
-      >
-        <div className="left-nav">
+      <div className="flex justify-between top-[2%] z-50 bg-violet-400">
+        <div className="left-nav mx-5">
           <Link to="/">
-            <img src={Logo} alt="" className="w-24" />
+            <img src={Logo} alt="" className="w-24 p-4" />
           </Link>
         </div>
 
-        <div className="right-nav text-white flex items-center gap-10  justify-between">
-          <ul className="flex items-center gap-4 text-sm font-bold max-lg:hidden relative">
+        <div className=" text-white flex  gap-10  justify-between">
+          <ul className="flex items-center gap-4 text-sm font-bold max-md:hidden ">
             <Link
               className="hover:text-[#DC2D13] transition-all duration-150 ease-in-out"
               to="/"
@@ -60,25 +54,8 @@ function Navbar() {
             </Link>
           </ul>
 
-          <div className="profile flex justify-center items-center gap-2 max-[440px]:hidden">
-            <Link to="/login">
-              <i className="ri-user-line bg-white text-black p-3 text-2xl rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out">
-                {" "}
-              </i>
-            </Link>
-            <div className="profile-dets ">
-              {/* <p className="text-white font-bold">HI, USER</p> */}
-              <Link to="/login">
-                <div className="log-in font-bold text-white text-2xl flex gap-1 hover:text-[#DC2D13] transition-all duration-150 ease-in-out">
-                  <i className="ri-login-box-line"></i>
-                  <p>Log In</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-
           <div
-            className="menu-icon hidden max-lg:block w-7  "
+            className="menu-icon hidden max-md:block w-7  "
             onClick={toggleHamburger}
           >
             {isMenuToggle ? (
@@ -92,6 +69,23 @@ function Navbar() {
                 onClick={toggleMenu}
               ></i>
             )}
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center gap-2 mx-5 max-[440px]:hidden">
+          <Link to="/login">
+            <i className="ri-user-line bg-white text-black p-2 text-sm rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out ">
+              {" "}
+            </i>
+          </Link>
+          <div className="profile-dets ">
+            {/* <p className="text-white font-bold">HI, USER</p> */}
+            <Link to="/login">
+              <div className="log-in font-bold text-white text-2xl flex gap-1 hover:text-[#DC2D13] transition-all duration-150 ease-in-out">
+                <i className="ri-login-box-line"></i>
+                <p>Log In</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
