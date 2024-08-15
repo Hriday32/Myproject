@@ -28,7 +28,7 @@ function HeroSection() {
       <div className="hero-container w-full h-auto -z-50  top-0 ">
         <div className="hero-bg w-full md:h-[100vh] bg-hero-pattern bg-no-repeat bg-center bg-cover ">
           <div className="hero-content bg-[#000000a2] w-full h-full flex flex-col justify-center items-center">
-            <div className="hero-heading flex flex-col justify-center items-center">
+            <div className="hero-heading flex flex-col justify-center items-center text-wrap md:text-balance">
               <h1 className="text-6xl text-white font-bold tracking-wide">
                 Best Car Rental Prices
               </h1>
@@ -61,7 +61,7 @@ function HeroSection() {
                     selected={DropUpDate}
                     onChange={(date) => setDropUpDate(date)}
                     dateFormat={"dd/MM/yyyy"}
-                    minDate={new Date()}
+                    minDate={pickUpDate}
                     popperPlacement="bottom"
                   />
                   <p className="text-white text-sm mt-2 font-bold max-lg:text-xs">
@@ -111,7 +111,7 @@ function HeroSection() {
       </div>
 
       <div>
-        <div className="grid grid-cols-12 gap-4 mb-10 mt-6 px-4 shadow-black">
+        <div className="grid grid-cols-12 gap-4 mb-20 mt-6  px-4 shadow-black">
           {filteredCar.length > 0 ? (
             filteredCar.map((car, index) => (
               <div

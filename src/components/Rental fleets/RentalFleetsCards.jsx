@@ -1,27 +1,22 @@
 import React from "react";
 import CarsData from "../../Data/RentalFleets";
 import RentalFleets from "../../Data/RentalFleets";
+import { Link } from "react-router-dom";
 import { RiSteeringLine } from "react-icons/ri";
 import { TbRoad } from "react-icons/tb";
 import { IoMdSpeedometer } from "react-icons/io";
 import { FaAnglesRight } from "react-icons/fa6";
-
+import Viewdetail from "./Viewdetail";
 
 function RentalFleetsCards({ isButton }) {
   return (
     <>
-      <div
-        className={`cars-container overflow-hidden ${
-          isButton
-            ? "h-[270vh] max-lg:h-[250vh] max-md:h-[300vh]"
-            : "min-h-[500vh]"
-        }`}
-      >
+      <div className="mb-20">
         <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1">
           {RentalFleets.map((car) => (
             <div
               key={car.id}
-              className="rental-fleet-card-container bg-yello-600 w-80 h-auto overflow-hidden shadow-2xl mt-16 max-lg:w-60 max-lg:h-auto max-md:w-[90vw] max-md:h-auto max-[500px]:w-96 max-[500px]:h-auto max-[450px]:w-72 max-[450px]:h-auto max-[380px]:w-64 "
+              className="rental-fleet-card-container bg-yello-600 w-80 h-auto shadow-2xl mt-16"
             >
               <div className="cars-image w-full h-[220px] overflow-hidden relative max-md:h-[300px] max-[500px]:h-[200px] max-[450px]:h-[150px]">
                 <img
@@ -63,12 +58,30 @@ function RentalFleetsCards({ isButton }) {
                 </div>
               </div>
 
-              <button
-                className="flex justify-center items-center bg-[#555555] w-full h-10 uppercase gap-2 font-bold text-sm mt-6 text-white hover:bg-[#DD3219] transition-all duration-200 max-[450px]:text-xs"
-                type="button"
-              >
-                View Details <FaAnglesRight />
-              </button>
+              <div className="flex justify-between mx-4 ">
+                <button
+                  className="flex justify-center items-center mx-5 rounded bg-[#555555] w-2/4 h-10 uppercase gap-2  text-xs my-6 text-white hover:bg-red-500 box-border"
+                  type="buttton"
+                >
+                  <Link to={""} className="flex justify-between  items-center">
+                    <div className="flex mx-2">Booking</div>
+                    <div>
+                      <FaAnglesRight />
+                    </div>
+                  </Link>
+                </button>
+                <button
+                  className="flex justify-center items-center rounded bg-[#555555] w-2/4 h-10 uppercase gap-2 f text-sm mt-6 text-white hover:bg-[#DD3219]"
+                  type="button"
+                >
+                  <Link to={""} className="flex justify-between  items-center">
+                    <div className="flex mx-1">Viewdetail</div>
+                    <div>
+                      <FaAnglesRight />
+                    </div>
+                  </Link>
+                </button>
+              </div>
             </div>
           ))}
         </div>

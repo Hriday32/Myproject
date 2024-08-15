@@ -6,9 +6,9 @@ import { IoIosCall } from "react-icons/io";
 function AdsBanner() {
   return (
     <>
-      <div className="ad-banner-container w-full h-[60vh] relative  mb-96 max-md:h-[40vh] max-[600px]:flex-col max-[600px]:h-[100vh]">
+      <div className="ad-banner-container w-full h-[60vh] relative  mb-96 mt-0">
         <img className="ad-img w-full h-full object-cover" src={image} alt="" />
-        <div className="ad-banner w-full h-[60vh] absolute top-0 bg-[#000000ce] z-50 overflow-hidden flex justify-space-between items-end max-md:h-[40vh] max-[600px]:flex-col max-[600px]:h-[100vh] max-[600px]:justify-center max-[600px]:items-center">
+        <div className="ad-banner w-full h-[100vh] absolute top-0 bg-[#000000ce] z-50 flex justify-space-between items-end ">
           <div className="left-ad text-white w-[50%] h-[100%] flex flex-col justify-center items-right text-right max-[600px]:text-center max-[600px]:w-full">
             <h2 className="text-2xl mb-4 max-lg:text-base max-md:text-sm w-full">
               {" "}

@@ -12,6 +12,7 @@
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x4",
+      
 
     },
 
@@ -27,6 +28,7 @@
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x4",
+    
     },
 
     {
@@ -211,5 +213,11 @@
         Drive: "4x4",
     }
 ]
+
+
+RentalFleets.forEach((car, index) => {
+    
+    car.id = index + 1; 
+});
 
 export default RentalFleets
