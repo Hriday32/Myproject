@@ -14,14 +14,14 @@ import ReviewsCardDetails from './ReviewsCardDetails';
 
 export default function ReviewCard() {
   return (
-    <div className='flex flex-col justify-center items-center  w-[100rem] pb-10 max-lg:w-[80rem] max-md:w-[70rem] max-[660px]:w-[60rem] h-full'>
+    <div className='flex flex-col justify-center items-center  w-[100rem] pb-10 '>
       <Swiper 
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper min-h-[50vh] max-md:h-[30vh] overflow-hidden max-[550px]:w-[50rem] h-full"
+        className="mySwiper"
       >
         <SwiperSlide> <ReviewsCardDetails /></SwiperSlide>
         <SwiperSlide> <ReviewsCardDetails /></SwiperSlide>

@@ -21,7 +21,7 @@ const socialIcons = [
 function Footer() {
   return (
     <div>
-      <div className="footer-container w-full h-[90vh] relative overflow-hidden max-sm:min-h-[100vh]">
+      <div className="footer-container w-full h-[90vh] absolute mt-10">
         <div className="w-full h-full bg-yellow-400">
           <img
             src={bgImg}
@@ -39,7 +39,7 @@ function Footer() {
               35 koteshwor, kathmandu -Nepal
             </h1>
 
-            <div className="company-info text-white flex items-center gap-4 justify-between w-[80%] mt-20 max-lg:flex-col max-lg:gap-8">
+            <div className="company-info text-white flex items-center gap-4 justify-between w-[80%] mt-20">
               <p className="font-bold">
                 <span className="text-gray-300 font-medium tracking-wider">
                   PHONE:
@@ -56,13 +56,7 @@ function Footer() {
                 <span className="text-gray-300 font-medium tracking-wider">
                   EMAIL{" "}
                 </span>{" "}
-                : ramhriday28@gmail.com
-              </p>
-              <p className="font-bold">
-                <span className="text-gray-300 font-medium tracking-wider">
-                  HOURS{" "}
-                </span>
-                : Mon – Fri :: 9am – 6pm
+                : r@gmail.com
               </p>
             </div>
 

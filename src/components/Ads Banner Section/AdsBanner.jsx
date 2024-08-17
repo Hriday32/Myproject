@@ -5,45 +5,43 @@ import { IoIosCall } from "react-icons/io";
 
 function AdsBanner() {
   return (
-    <>
-      <div className="ad-banner-container w-full h-[60vh] relative  mb-96 mt-0">
-        <img className="ad-img w-full h-full object-cover" src={image} alt="" />
-        <div className="ad-banner w-full h-[100vh] absolute top-0 bg-[#000000ce] z-50 flex justify-space-between items-end ">
-          <div className="left-ad text-white w-[50%] h-[100%] flex flex-col justify-center items-right text-right max-[600px]:text-center max-[600px]:w-full">
-            <h2 className="text-2xl mb-4 max-lg:text-base max-md:text-sm w-full">
-              {" "}
-              Call Today For Booking Your Next Ride
-            </h2>
-            <h1 className="flex justify-end items-center gap-2 text-5xl mb-4 max-lg:text-3xl max-md:text-xl w-full max-[600px]:justify-center">
-              {" "}
-              <IoIosCall className="w-20 h-20 text-[#DD3219] max-lg:w-10 max-lg:h-10" />{" "}
-              (+977) 9819604968
-            </h1>
-            <p className=" text-lg italic max-md:text-sm w-full">
-              Operators available 24/7
-            </p>
-          </div>
-
-          <img
-            className="mx-10 max-lg:w-1/4 max-[600px]:w-[300px]"
-            src={model}
-            alt=""
-          />
-
-          <div className="right-ad text-white w-[50%] h-[100%] flex flex-col justify-center items-left text-left  max-[600px]:justify-center max-[600px]:items-center max-[600px]:w-full">
-            <h2 className="text-2xl mb-8 max-lg:text-base max-lg:mb-4 max-md:text-sm">
-              Upto 35% Discounts & Special Offers
-            </h2>
-            <h1 className="text-5xl mb-8 max-lg:mb-4 max-lg:text-3xl max-md:text-xl">
-              Rent a Car for 7 Days
-            </h1>
-            <p className="italic text-lg max-md:text-sm">
-              and get 3 days extra absolutely FREE
-            </p>
-          </div>
+    <div className="ad-banner-container w-full h-auto relative mb-20 mt-0">
+      <div className="absolute inset-0 z-0">
+        <img className="w-full h-full object-cover" src={image} alt="" />
+        <div className="absolute inset-0 bg-[#272525ce]">
         </div>
       </div>
-    </>
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 p-4 h-full items-center md:items-end">
+        <div className="left-ad text-white w-full h-full flex flex-col justify-center items-center md:items-end text-center md:text-right p-4">
+          <h2 className="text-lg md:text-2xl mb-2 md:mb-4 w-full">
+            Call Today For Booking Your Next Ride
+          </h2>
+          <h1 className="flex justify-center md:justify-end items-center gap-2 text-3xl md:text-5xl mb-2 md:mb-4 w-full">
+            <IoIosCall className="w-10 h-10 md:w-20 md:h-20 text-[#DD3219]" />
+            (+977) 9819604968
+          </h1>
+          <p className="text-sm md:text-lg italic w-full">
+            Operators available 24/7
+          </p>
+        </div>
+
+        <div className="flex justify-center items-center w-full h-full p-4">
+          <img className="h-40 md:h-80" src={model} alt="" />
+        </div>
+
+        <div className="right-ad text-white w-full h-full flex flex-col justify-center items-center md:items-start text-center md:text-left p-4">
+          <h2 className="text-lg md:text-2xl mb-2 md:mb-8">
+            Upto 35% Discounts & Special Offers
+          </h2>
+          <h1 className="text-3xl md:text-5xl mb-2 md:mb-8">
+            Rent a Car for 7 Days
+          </h1>
+          <p className="italic text-sm md:text-lg">
+            and get 3 days extra absolutely FREE
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
 

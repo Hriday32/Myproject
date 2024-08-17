@@ -13,7 +13,6 @@ import SliderImg2 from "../Newest car fleet/Slider Img 2.jpeg";
 import SliderImg3 from "../Newest car fleet/Slider Img 3.jpeg";
 import SliderImg4 from "../Newest car fleet/Slider Img 4.jpeg";
 
-// import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function NewestCarCard() {
