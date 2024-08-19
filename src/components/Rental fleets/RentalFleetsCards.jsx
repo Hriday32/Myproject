@@ -1,14 +1,11 @@
-import React from "react";
-import CarsData from "../../Data/RentalFleets";
-import RentalFleets from "../../Data/RentalFleets";
 import { Link } from "react-router-dom";
 import { RiSteeringLine } from "react-icons/ri";
 import { TbRoad } from "react-icons/tb";
 import { IoMdSpeedometer } from "react-icons/io";
 import { FaAnglesRight } from "react-icons/fa6";
-import Viewdetail from "./Viewdetail";
+import RentalFleets from "../../Data/RentalFleets";
 
-function RentalFleetsCards({ isButton }) {
+function RentalFleetsCards() {
   return (
     <>
       <div className="mb-20">
@@ -16,7 +13,7 @@ function RentalFleetsCards({ isButton }) {
           {RentalFleets.map((car) => (
             <div
               key={car.id}
-              className="rental-fleet-card-container bg-yello-600 w-80 h-auto shadow-2xl mt-16"
+              className="rental-fleet-card-container bg-yellow-600 w-80 h-auto shadow-2xl mt-16"
             >
               <div className="cars-image w-full h-[220px] overflow-hidden relative max-md:h-[300px] max-[500px]:h-[200px] max-[450px]:h-[150px]">
                 <img
@@ -25,7 +22,7 @@ function RentalFleetsCards({ isButton }) {
                   alt="carImage"
                 />
 
-                <div className="price-tag absolute top-36 text-white right-4 w-20 h-14 justify-center items-center  bg-[#DD3219] py-2 max-lg:h-12 max-lg:top-28 max-md:top-60 max-[500px]:top-36 max-[450px]:top-24 max-[450px]:w-16 max-[450px]:h-11 max-[450px]:right-2">
+                <div className="price-tag absolute top-36 text-white right-4 w-20 h-14 justify-center items-center bg-[#DD3219] py-2 max-lg:h-12 max-lg:top-28 max-md:top-60 max-[500px]:top-36 max-[450px]:top-24 max-[450px]:w-16 max-[450px]:h-11 max-[450px]:right-2">
                   <p className="text-sm text-center font-medium max-lg:text-xs max-[450px]:text-[10px]">
                     {car.pricePerDay}
                   </p>
@@ -63,7 +60,10 @@ function RentalFleetsCards({ isButton }) {
                   className="flex justify-center items-center mx-5 rounded bg-[#555555] w-2/4 h-10 uppercase gap-2  text-xs my-6 text-white hover:bg-red-500 box-border"
                   type="buttton"
                 >
-                  <Link to={""} className="flex justify-between  items-center">
+                  <Link
+                    to={`/booking/${car.slug}`}
+                    className="flex justify-between items-center"
+                  >
                     <div className="flex mx-2">Booking</div>
                     <div>
                       <FaAnglesRight />
@@ -71,10 +71,13 @@ function RentalFleetsCards({ isButton }) {
                   </Link>
                 </button>
                 <button
-                  className="flex justify-center items-center rounded bg-[#555555] w-2/4 h-10 uppercase gap-2 f text-sm mt-6 text-white hover:bg-[#DD3219]"
+                  className="flex justify-center items-center rounded bg-[#555555] w-2/4 h-10 uppercase gap-2 text-sm mt-6 text-white hover:bg-[#DD3219]"
                   type="button"
                 >
-                  <Link to={""} className="flex justify-between  items-center">
+                  <Link
+                    to={`/viewdetail/${car.slug}`}
+                    className="flex justify-between items-center"
+                  >
                     <div className="flex mx-1">Viewdetail</div>
                     <div>
                       <FaAnglesRight />

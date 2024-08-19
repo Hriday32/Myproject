@@ -1,19 +1,16 @@
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
 import "../Newest car fleet/NewestCarCard.css";
 import SliderImg1 from "../Newest car fleet/Slider Img 1.jpeg";
 import SliderImg2 from "../Newest car fleet/Slider Img 2.jpeg";
 import SliderImg3 from "../Newest car fleet/Slider Img 3.jpeg";
 import SliderImg4 from "../Newest car fleet/Slider Img 4.jpeg";
-
 import { EffectCoverflow, Pagination } from "swiper/modules";
+
+
 
 export default function NewestCarCard() {
   return (

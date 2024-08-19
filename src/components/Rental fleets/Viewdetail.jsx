@@ -1,15 +1,60 @@
-import React from "react";
-import RentalFleets from "../../Data/RentalFleets";
+import React, { useEffect, useState } from "react";
+import Rentalfleet from "../../Data/RentalFleets";
 import { useParams } from "react-router-dom";
-import { ClassNames } from "@emotion/react";
+import { Link } from "react-router-dom";
+import { FaAnglesRight } from "react-icons/fa6";
+
 const Viewdetail = () => {
-  const { id } = useParams();
-  console.log(id);
-   return(
-    <div ClassNames="">
-        <h1>hello world</h1>
+  const [detail, setDetail] = useState(null);
+  const { slug } = useParams();
+
+  useEffect(() => {
+    const findDetail = Rentalfleet.filter(
+      (RentalFleet) => RentalFleet.slug === slug
+    );
+    if (findDetail.length > 0) {
+      setDetail(findDetail[0]);
+    } else {
+      window.location.href = "/";
+    }
+  }, [slug]);
+
+  if (!detail) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <h2 className="text-3xl text-center mt-5"> Our Car Detail</h2>
+      <div className="grid grid-cols-2 gap-5 mt-5 max-md:grid-cols-1">
+        <div className="rounded">
+          <img
+            src={detail.carImage}
+            alt={detail.carTitle}
+            className="w-full rounded p-5"
+          />
+        </div>
+        <div className="flex flex-col gap-5 p-5">
+          <h1 className="text-4xl uppercase font-bold">{detail.carTitle}</h1>
+          <h2 className="text-2xl italic">{detail.carInfo}</h2>
+          <p className="font-bold text-3xl">Car Year: {detail.carYear}</p>
+          <p className="font-bold text-3xl">
+            Car Top Speed: {detail.carTopSpeed}
+          </p>
+          <p className="font-bold text-3xl">{detail.pricePerDay} / day</p>
+          <button
+            className="flex justify-center items-center mx-5 rounded bg-[#555555] w-2/4 h-10 uppercase gap-2  text-xs my-6 text-white hover:bg-red-500 box-border"
+            type="buttton"
+          >
+            <Link to="" className="flex justify-between items-center">
+              <div className="flex mx-2">Booking</div>
+              <div>
+                <FaAnglesRight />
+              </div>
+            </Link>
+          </button>
+        </div>
+      </div>
     </div>
-   )
+  );
 };
 
 export default Viewdetail;

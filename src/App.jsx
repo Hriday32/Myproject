@@ -9,6 +9,7 @@ import "./index.css";
 import LoginSection from "./Pages/LoginSection";
 import SignUp from "./Pages/SignUp";
 import Viewdetail from "./components/Rental fleets/Viewdetail";
+import Booking from "./components/Rental fleets/Booking";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<LoginSection />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/Viewdetail/:id" element={<Viewdetail />} />
-
+            <Route path="/viewdetail/:slug" element={<Viewdetail />} />
+            <Route path ="/booking/:slug" element={<Booking/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

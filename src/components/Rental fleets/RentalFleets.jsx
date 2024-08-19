@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import RentalFleetsCards from "./RentalFleetsCards";
 import "../Rental fleets/loader.css";
-
 import { FaCaretDown } from "react-icons/fa";
 
 function RentalFleetsCar() {
@@ -18,8 +17,9 @@ function RentalFleetsCar() {
   };
 
   return (
-    <>
-      <div className="rental-fleets-container w-full min-h-screen bg-slae-500 flex flex-col justify-center items-center">
+    <>  
+      <div
+        className="rental-fleets-container w-full min-h-screen bg-slae-500 flex flex-col justify-center items-center">
         <div className="f-headings w-full flex flex-col justify-center items-center">
           <h2 className="text-base uppercase max-lg:text-sm max-[500px]:text-xs max-[380px]:text-[10px]">
             Discover the Perfect Ride for Every Occasion
