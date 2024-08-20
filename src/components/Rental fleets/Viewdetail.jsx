@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Rentalfleet from "../../Data/RentalFleets";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ const Viewdetail = () => {
   if (!detail) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="">
       <h2 className="text-3xl text-center mt-5"> Our Car Detail</h2>
       <div className="grid grid-cols-2 gap-5 mt-5 max-md:grid-cols-1">
         <div className="rounded">
@@ -44,7 +44,10 @@ const Viewdetail = () => {
             className="flex justify-center items-center mx-5 rounded bg-[#555555] w-2/4 h-10 uppercase gap-2  text-xs my-6 text-white hover:bg-red-500 box-border"
             type="buttton"
           >
-            <Link to="" className="flex justify-between items-center">
+            <Link
+              to={`/booking/${detail.slug}`}
+              className="flex justify-between items-center"
+            >
               <div className="flex mx-2">Booking</div>
               <div>
                 <FaAnglesRight />
