@@ -11,7 +11,6 @@ import SignUp from "./Pages/SignUp";
 import Viewdetail from "./components/Rental fleets/Viewdetail";
 import Booking from "./components/Rental fleets/Booking";
 
-
 function App() {
   return (
     <>
@@ -22,8 +21,8 @@ function App() {
             <Route path="/ourCars" element={<OurCars />} />
             <Route path="/ourNews" element={<OurNews />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="viewdetail/:slug" element={<Viewdetail />} />
-            <Route path="/booking/:slug" element={<Booking />} />
+            <Route path="viewdetail/:id" element={<Viewdetail />} />
+            <Route path="/booking/:id" element={<Booking />} />
           </Route>
           <Route path="/login" element={<LoginSection />} />
           <Route path="/signup" element={<SignUp />} />

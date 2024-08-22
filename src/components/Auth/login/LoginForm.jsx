@@ -51,16 +51,31 @@ function LoginForm() {
       borderRadius="lg"
       backgroundColor={"#f5f5f5"}
     >
-      <VStack className="vstack">
-        <Text
-          className="heading"
-          fontSize="40"
-          marginY={"20px"}
-          textTransform={"uppercase"}
-          fontWeight={"bold"}
-        >
-          Log In
-        </Text>
+      <VStack className="vstack flex">
+        <div className="flex gap-2">
+          <Text
+            className="heading"
+            fontSize="40"
+            marginY={"20px"}
+            textTransform={"uppercase"}
+            fontWeight={"bold"}
+          >
+            Log In /
+          </Text>
+
+          <Link to="/signup">
+            <Text
+              className="heading"
+              fontSize="40"
+              marginY={"20px"}
+              textTransform={"uppercase"}
+              fontWeight={"bold"}
+              style={{ textDecoration: "underline" }}
+            >
+              Sign UP
+            </Text>
+          </Link>
+        </div>
         <form onSubmit={handleSubmit}>
           <FormControl>
             <FormLabel fontSize={"20px"} marginBottom={"10px"}>
@@ -76,6 +91,7 @@ function LoginForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email address"
+              required
             />
           </FormControl>
 
@@ -93,6 +109,7 @@ function LoginForm() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Enter your Password"
+              required
             />
           </FormControl>
           <Button

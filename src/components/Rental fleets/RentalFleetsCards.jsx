@@ -3,14 +3,15 @@ import { RiSteeringLine } from "react-icons/ri";
 import { TbRoad } from "react-icons/tb";
 import { IoMdSpeedometer } from "react-icons/io";
 import { FaAnglesRight } from "react-icons/fa6";
-import RentalFleets from "../../Data/RentalFleets";
+// import RentalFleets from "../../Data/RentalFleets";
+import { FinalCarList } from "../../Data/Searchlist";
 
 function RentalFleetsCards() {
   return (
     <>
       <div className="mb-20">
         <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1">
-          {RentalFleets.map((car) => (
+          {FinalCarList.map((car) => (
             <div
               key={car.id}
               className="rental-fleet-card-container bg-yellow-600 w-80 h-auto shadow-2xl mt-16"
@@ -61,7 +62,7 @@ function RentalFleetsCards() {
                   type="buttton"
                 >
                   <Link
-                    to={`/booking/${car.slug}`}
+                    to={`/booking/${car.id}`}
                     className="flex justify-between items-center"
                   >
                     <div className="flex mx-2">Booking</div>
@@ -75,7 +76,7 @@ function RentalFleetsCards() {
                   type="button"
                 >
                   <Link
-                    to={`/viewdetail/${car.slug}`}
+                    to={`/viewdetail/${car.id}`}
                     className="flex justify-between items-center"
                   >
                     <div className="flex mx-1">Viewdetail</div>

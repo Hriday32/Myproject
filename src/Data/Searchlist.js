@@ -1,6 +1,7 @@
 export const TataFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Tata Tigor.jpeg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata tigor",
         carYear : "2022",
@@ -11,9 +12,11 @@ export const TataFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:1
   },
   {
     carImage : "/src/assets/Cars fleet/Suv Sports/Tata Nexon.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata Nexon",
         carYear : "2022",
@@ -24,9 +27,11 @@ export const TataFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:2
   },
   {
     carImage : "/src/assets/Cars fleet/Suv Sports/Tata Punch.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata Nexon",
         carYear : "2022",
@@ -37,11 +42,13 @@ export const TataFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:3
   },
 ]
 export const MahenFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Tata Tigor.jpeg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata tigor",
         carYear : "2022",
@@ -52,9 +59,11 @@ export const MahenFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:4
   },
   {
     carImage : "/src/assets/Cars fleet/Suv Sports/Tata Nexon.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata Nexon",
         carYear : "2022",
@@ -65,9 +74,11 @@ export const MahenFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:5
   },
   {
     carImage : "/src/assets/Cars fleet/Suv Sports/Tata Punch.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Tata Nexon",
         carYear : "2022",
@@ -78,11 +89,13 @@ export const MahenFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:6
   },
 ]
 export const MarutiFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Alto 800.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -93,9 +106,11 @@ export const MarutiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:7
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Baleno.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -106,9 +121,11 @@ export const MarutiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:8
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -119,9 +136,11 @@ export const MarutiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:9
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -132,9 +151,11 @@ export const MarutiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:10
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -145,11 +166,13 @@ export const MarutiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:11
   },
 ]
 export const HyundaiFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Hyundai Aura.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -160,9 +183,11 @@ export const HyundaiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:12
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Hyundai i20.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -173,9 +198,11 @@ export const HyundaiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:13
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -186,9 +213,11 @@ export const HyundaiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:14
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -199,9 +228,11 @@ export const HyundaiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:15
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -212,11 +243,13 @@ export const HyundaiFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:16
   },
 ]
 export const HondaFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Sedan/Honda City.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Honda",
         carYear : "2022",
@@ -227,9 +260,11 @@ export const HondaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:17
   },
   {
     carImage : "/src/assets/Cars fleet/Sedan/Honda Amaze.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Honda",
         carYear : "2022",
@@ -240,9 +275,11 @@ export const HondaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:18
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -253,9 +290,11 @@ export const HondaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:19
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -266,9 +305,11 @@ export const HondaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:20
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -279,11 +320,13 @@ export const HondaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:21
   },
 ]
 export const ToyotaFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "toyata",
         carYear : "2022",
@@ -294,9 +337,11 @@ export const ToyotaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:22
   },
   {
     carImage : "/src/assets/Cars fleet/Sedan/Honda Amaze.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Honda",
         carYear : "2022",
@@ -307,9 +352,11 @@ export const ToyotaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:23
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -320,9 +367,11 @@ export const ToyotaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:24
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -333,9 +382,11 @@ export const ToyotaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:25
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -346,11 +397,13 @@ export const ToyotaFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:26
   },
 ]
 export const ForFindCar = [
   {
     carImage : "/src/assets/Cars fleet/Muv/Toyota Innova Crysta.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Ford",
         carYear : "2022",
@@ -361,9 +414,11 @@ export const ForFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:27
   },
   {
     carImage : "/src/assets/Cars fleet/Sedan/Honda Amaze.webp",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Honda",
         carYear : "2022",
@@ -374,9 +429,11 @@ export const ForFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:28
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -387,9 +444,11 @@ export const ForFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:29
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Swift.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -400,9 +459,11 @@ export const ForFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:30
   },
   {
     carImage : "/src/assets/Cars fleet/Hatchback/Maruti Suzuki Wagon R.jpg",
+    carInfo:"Experience the perfect blend of performance and comfort with this meticulously maintained vehicle. Featuring a powerful engine, sleek design, and modern technology, it's the ideal choice for those who demand excellence in every drive. Don't miss out on owning this exceptional car—it's ready to elevate your driving experience.",
         pricePerDay : "Rs 6800 ",
         carTitle : "Maruti Suzuki",
         carYear : "2022",
@@ -413,5 +474,9 @@ export const ForFindCar = [
         Condition: "Driver",
         Engine: "1900 cm3",
         Drive: "4x2",
+        id:31
   },
+
 ]
+
+export const FinalCarList = [...ForFindCar, ...HondaFindCar, ...HyundaiFindCar, ...MahenFindCar,...MarutiFindCar, ...TataFindCar,...ToyotaFindCar];

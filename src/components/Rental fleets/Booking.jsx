@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import RentalFleets from "../../Data/RentalFleets";
+import { FinalCarList } from "../../Data/Searchlist";
 import { toast } from "react-toastify";
 
 const Booking = () => {
-  const { slug } = useParams();
-  const car = RentalFleets.find((car) => car.slug === slug);
+  const { id } = useParams();
+  const car = FinalCarList.find((car) => car.id == id);
   const [pickupDate, setPickupDate] = useState("");
   const [dropDate, setDropDate] = useState("");
   const [totalCost, setTotalCost] = useState(0);
@@ -13,7 +14,6 @@ const Booking = () => {
   const message = () => {
     toast.success("Booking is sucessfully!");
   };
-  console.log(pickupDate);
 
   useEffect(() => {
     calculateCost();
@@ -70,6 +70,7 @@ const Booking = () => {
                 }
               }}
               minDate={new Date()}
+              required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -84,6 +85,7 @@ const Booking = () => {
               dateFormat={"dd/MM/yyyy"}
               onChange={(date) => setDropDate(date.target.value)}
               minDate={pickupDate}
+              required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>

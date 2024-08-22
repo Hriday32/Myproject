@@ -1,23 +1,25 @@
 import React, { useEffect, useState, useRef } from "react";
-import Rentalfleet from "../../Data/RentalFleets";
+// import Rentalfleet from "../../Data/RentalFleets";
+import { FinalCarList } from "../../Data/Searchlist";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaAnglesRight } from "react-icons/fa6";
 
 const Viewdetail = () => {
   const [detail, setDetail] = useState(null);
-  const { slug } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    const findDetail = Rentalfleet.filter(
-      (RentalFleet) => RentalFleet.slug === slug
+    const findDetail = FinalCarList.filter(
+      (FinalCarList) => FinalCarList.id === Number(id)
     );
+
     if (findDetail.length > 0) {
       setDetail(findDetail[0]);
     } else {
-      window.location.href = "/";
+      // window.location.href = "/";
     }
-  }, [slug]);
+  }, [id]);
 
   if (!detail) return <div>Loading...</div>;
 
@@ -45,7 +47,7 @@ const Viewdetail = () => {
             type="buttton"
           >
             <Link
-              to={`/booking/${detail.slug}`}
+              to={`/booking/${detail.id}`}
               className="flex justify-between items-center"
             >
               <div className="flex mx-2">Booking</div>

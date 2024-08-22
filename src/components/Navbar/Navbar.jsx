@@ -74,12 +74,10 @@ function Navbar() {
 
         <div className="flex justify-center items-center gap-2 mx-5 max-[440px]:hidden">
           <Link to="/login">
-            <i className="ri-user-line bg-white text-black p-2 text-sm rounded-full hover:bg-[#DC2D13] hover:text-white transition-all duration-150 ease-in-out ">
-              {" "}
-            </i>
+            
           </Link>
           <div className="profile-dets ">
-            {/* <p className="text-white font-bold">HI, USER</p> */}
+          
             <Link to="/login">
               <div className="log-in font-bold text-white text-2xl flex gap-1 hover:text-[#DC2D13] transition-all duration-150 ease-in-out">
                 <i className="ri-login-box-line"></i>

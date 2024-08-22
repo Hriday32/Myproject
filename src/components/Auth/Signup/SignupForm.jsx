@@ -63,14 +63,27 @@ function SignupForm() {
       backgroundColor={"#F5F5F5"}
     >
       <VStack>
-        <Text
-          fontSize="40px"
-          marginY={"20px"}
-          textTransform={"uppercase"}
-          fontWeight={"bold"}
-        >
-          Sign Up
-        </Text>
+        <div className="flex gap-2">
+          <Link to="/login">
+            <Text
+              fontSize="40px"
+              marginY={"20px"}
+              textTransform={"uppercase"}
+              fontWeight={"bold"}
+              style={{ textDecoration: "underline" }}
+            >
+              Login In
+            </Text>
+          </Link>
+          <Text
+            fontSize="40px"
+            marginY={"20px"}
+            textTransform={"uppercase"}
+            fontWeight={"bold"}
+          >
+            / Sign Up
+          </Text>
+        </div>
         <form onSubmit={handleSubmit}>
           <FormControl>
             <FormLabel>First Name</FormLabel>
@@ -141,6 +154,12 @@ function SignupForm() {
           >
             Sign Up
           </Button>
+          <Text marginTop={"20px"}>
+            I have an account?{" "}
+            <Link to="/login" style={{ textDecoration: "underline" }}>
+              Log In
+            </Link>
+          </Text>
         </form>
       </VStack>
     </Box>

@@ -1,27 +1,32 @@
 import React, { useState } from "react";
-import * as abcd from "../../Data/Searchlist";
+import { FinalCarList } from "../../Data/Searchlist";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { useNavigate } from "react-router-dom";
+import * as brandData from "../../Data/Searchlist";
 function HeroSection() {
   const [pickUpDate, setPickUpDate] = useState(null);
   const [DropUpDate, setDropUpDate] = useState(null);
   const [selectbrand, setselectbrand] = useState("All Brands");
   const [filteredCar, setfilteredCar] = useState([]);
+  const navigate = useNavigate();
 
   const carData = {
-    Tata: abcd.TataFindCar,
-    Mahindra: abcd.MahenFindCar,
-    "Maruti Suzuki": abcd.MarutiFindCar,
-    Hyundai: abcd.HyundaiFindCar,
-    Honda: abcd.HondaFindCar,
-    Toyota: abcd.ToyotaFindCar,
-    Ford: abcd.ForFindCar,
+    Tata: brandData.TataFindCar,
+    Mahindra: brandData.MahenFindCar,
+    "Maruti Suzuki": brandData.MarutiFindCar,
+    Hyundai: brandData.HyundaiFindCar,
+    Honda: brandData.HondaFindCar,
+    Toyota: brandData.ToyotaFindCar,
+    Ford: brandData.ForFindCar,
   };
+  console.log(FinalCarList);
   const handleBrandChange = (event) => {
     const brand = event.target.value;
     setselectbrand(brand);
   };
+
+  console.log("hello", filteredCar);
 
   return (
     <div>
@@ -29,10 +34,10 @@ function HeroSection() {
         <div className="hero-bg w-full md:h-[100vh] bg-hero-pattern bg-no-repeat bg-center bg-cover ">
           <div className="hero-content bg-[#000000a2] w-full h-full flex flex-col justify-center items-center">
             <div className="hero-heading flex flex-col justify-center items-center text-wrap md:text-balance">
-              <h1 className="text-6xl text-white font-bold tracking-wide">
+              <h1 className="text-6xl max-md:text-3xl text-white font-bold tracking-wide">
                 Best Car Rental Prices
               </h1>
-              <p className="text-xl text-white mt-2 font-semibold ">
+              <p className="text-xl text-white mt-2 font-semibold text-center">
                 Practical & Convenient Auto Hire, As Low As Rs:3500 / day
               </p>
             </div>
@@ -99,7 +104,8 @@ function HeroSection() {
                   if (selectbrand === "All Brands") {
                     setfilteredCar([]);
                   } else {
-                    setfilteredCar(carData[selectbrand]);
+                    // console.log(selectbrand);
+                     setfilteredCar(carData[selectbrand]);
                   }
                 }}
               >
@@ -116,6 +122,7 @@ function HeroSection() {
             filteredCar.map((car, index) => (
               <div
                 key={index}
+                onClick={() => navigate(`/Viewdetail/${car.id}`)}
                 className="col-span-12 md:col-span-6 lg:col-span-4 border-slate-700 border-solid "
               >
                 <img
