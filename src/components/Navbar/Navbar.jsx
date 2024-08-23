@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
-import RentalFleets from "../Rental fleets/RentalFleets";
 
 function Navbar() {
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const [isHamburgerVisible, setisHamburgerVisible] = useState(false);
-  const [isFullWidth, setIsFullWidth] = useState(window.scrollY > 100);
 
   const toggleMenu = () => {
     setIsMenuToggle(!isMenuToggle);
@@ -20,7 +18,7 @@ function Navbar() {
   return (
     <>
       <div className="flex justify-between top-[2%] z-50 bg-violet-400">
-        <div className="left-nav mx-5">
+        <div className="left-nav mx-5 max-md:hidden">
           <Link to="/">
             <img src={Logo} alt="" className="w-24 p-4" />
           </Link>
@@ -55,7 +53,7 @@ function Navbar() {
           </ul>
 
           <div
-            className="menu-icon hidden max-md:block w-7  "
+            className="menu-icon hidden max-md:block w-7  p-2"
             onClick={toggleHamburger}
           >
             {isMenuToggle ? (
@@ -72,21 +70,16 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-2 mx-5 max-[440px]:hidden">
+        <div className="flex justify-center items-center gap-2 mx-5 ">
           <Link to="/login">
-            
+            <div className="log-in font-bold text-white text-2xl flex gap-1 hover:text-[#DC2D13] transition-all duration-150 ease-in-out">
+              <i className="ri-login-box-line"></i>
+              <p>Log In</p>
+            </div>
           </Link>
-          <div className="profile-dets ">
-          
-            <Link to="/login">
-              <div className="log-in font-bold text-white text-2xl flex gap-1 hover:text-[#DC2D13] transition-all duration-150 ease-in-out">
-                <i className="ri-login-box-line"></i>
-                <p>Log In</p>
-              </div>
-            </Link>
-          </div>
         </div>
       </div>
+
       <Hamburger
         setisHamburgerVisible={setisHamburgerVisible}
         isHamburgerVisible={isHamburgerVisible}
