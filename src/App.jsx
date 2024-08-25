@@ -11,6 +11,7 @@ import SignUp from "./Pages/SignUp";
 import Viewdetail from "./components/Rental fleets/Viewdetail";
 import Booking from "./components/Rental fleets/Booking";
 
+
 function App() {
   return (
     <>

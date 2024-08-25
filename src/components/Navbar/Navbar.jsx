@@ -17,7 +17,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex justify-between top-[2%] z-50 bg-violet-400">
+      <div
+        className="flex justify-between bg-violet-400 sticky end-0 w-full "
+        style={{ zIndex: "1000" }}
+      >
         <div className="left-nav mx-5 max-md:hidden">
           <Link to="/">
             <img src={Logo} alt="" className="w-24 p-4" />

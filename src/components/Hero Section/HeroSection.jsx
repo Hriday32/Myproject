@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FinalCarList } from "../../Data/Searchlist";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -10,6 +10,7 @@ function HeroSection() {
   const [selectbrand, setselectbrand] = useState("All Brands");
   const [filteredCar, setfilteredCar] = useState([]);
   const navigate = useNavigate();
+  const resultRef = useRef(null);
 
   const carData = {
     Tata: brandData.TataFindCar,
@@ -20,13 +21,10 @@ function HeroSection() {
     Toyota: brandData.ToyotaFindCar,
     Ford: brandData.ForFindCar,
   };
-  console.log(FinalCarList);
   const handleBrandChange = (event) => {
     const brand = event.target.value;
     setselectbrand(brand);
   };
-
-  console.log("hello", filteredCar);
 
   return (
     <div>
@@ -37,7 +35,7 @@ function HeroSection() {
               <h1 className="text-6xl max-md:text-3xl text-white font-bold tracking-wide">
                 Best Car Rental Prices
               </h1>
-              <p className="text-xl text-white mt-2 font-semibold text-center">
+              <p className="text-xl max-md:text-sm text-white mt-2 font-semibold text-center">
                 Practical & Convenient Auto Hire, As Low As Rs:3500 / day
               </p>
             </div>
@@ -104,8 +102,10 @@ function HeroSection() {
                   if (selectbrand === "All Brands") {
                     setfilteredCar([]);
                   } else {
-                    // console.log(selectbrand);
-                     setfilteredCar(carData[selectbrand]);
+                    setfilteredCar(carData[selectbrand]);
+                  }
+                  if (resultRef.current) {
+                    resultRef.current.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -116,8 +116,8 @@ function HeroSection() {
         </div>
       </div>
 
-      <div>
-        <div className="grid grid-cols-12 gap-4 mb-20 mt-6  px-4 shadow-black">
+      <div ref={resultRef}>
+        <div className="grid grid-cols-12 gap-4 mb-20 mt-6 px-4 shadow-black">
           {filteredCar.length > 0 ? (
             filteredCar.map((car, index) => (
               <div
@@ -126,7 +126,7 @@ function HeroSection() {
                 className="col-span-12 md:col-span-6 lg:col-span-4 border-slate-700 border-solid "
               >
                 <img
-                  className="w-full h-[200px] justify-self-center "
+                  className="w-full h-[400px] justify-self-center max-md:h-[400px] "
                   src={car.carImage}
                 />{" "}
                 <h2 className="text-center dotted font-bold">{car.carTitle}</h2>

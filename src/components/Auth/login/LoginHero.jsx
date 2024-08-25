@@ -11,7 +11,9 @@ const LoginHero = () => {
           alt=""
         />
         <div className="bg-[#000000c9] absolute top-0 w-full h-full flex justify-center items-center flex-col">
-          <h1 className="'uppercase text-white text-4xl font-bold">Log In</h1>
+          <h1 className="'uppercase text-white text-4xl font-bold">
+            Car Rental Sevice
+          </h1>
         </div>
       </div>
     </>
